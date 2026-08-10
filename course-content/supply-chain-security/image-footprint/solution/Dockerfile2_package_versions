@@ -6,6 +6,6 @@ COPY app.go .
 RUN CGO_ENABLED=0 go build app.go
 
 # app container stage 2
-FROM alpine:3.11.6
+FROM alpine:3.19.4
 COPY --from=0 /app .
 CMD ["./app"]
